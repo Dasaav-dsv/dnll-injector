@@ -19,7 +19,7 @@ Follow the Microsoft guidelines for dllmain contents.
 To be able to create a process with injected dlls, all of them NEED TO EXPORT AT LEAST ONE FUNCTION. 
 You can copy the following function into your dll:
 ```cpp
-__decltype(dllexport) void dummyExport() {}
+__declspec(dllexport) void dummyExport() {}
 ```
 The function contents do not matter as it will not be called, it is only used for the import table injection.
 # WARNING:
